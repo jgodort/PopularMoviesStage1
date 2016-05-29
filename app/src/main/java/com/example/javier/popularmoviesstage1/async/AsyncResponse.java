@@ -17,7 +17,7 @@ public interface AsyncResponse {
     void onPostExecuteDelegate(List<MovieEntity> results);
 
     void onPreExecute();
-    void processMovies(List<MovieEntity> results);
+
 
 }
 
