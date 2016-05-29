@@ -30,11 +30,8 @@ public class FetchMoviesTask extends AsyncTask<String, Void, List<MovieEntity>> 
 
     @Override
     protected void onPostExecute(List<MovieEntity> movieEntities) {
-
-        if (movieEntities != null) {
-            delegate.onPostExecuteDelegate(movieEntities);
-        }
-
+        delegate.onPostExecuteDelegate(movieEntities);
+        super.onPostExecute(movieEntities);
     }
 
     /**

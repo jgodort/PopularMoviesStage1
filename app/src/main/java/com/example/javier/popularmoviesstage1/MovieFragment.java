@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * Created by javie on 03/04/2016.
  */
-public class MovieFragment extends Fragment {
+public class MovieFragment extends Fragment{
 
     private MovieAdapter mMoviesAdapter = null;
     private List<MovieEntity> mListMovies = null;
@@ -118,6 +118,13 @@ public class MovieFragment extends Fragment {
         for (MovieEntity movie : mListMovies) {
             mMoviesAdapter.add(movie);
         }
+    }
+
+    @Override
+    public void processMovies(List<MovieEntity> movies) {
+
+
+        mMoviesAdapter.notifyDataSetChanged();
     }
 
 }
